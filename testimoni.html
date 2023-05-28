@@ -19,7 +19,7 @@
 
     <!-- style css -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/testimoni.css">
+    <link rel="stylesheet" href="./assets/css/Testimonial.css">
 </head>
 <body>
     <!-- start navbar -->
@@ -27,65 +27,67 @@
         <div class="left-nav">
             <img src="./assets/images/logo.png" alt="">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="addProject.html">My Project</a></li>
-                <li><a href="testimoni.html" class="active">Testimonial</a></li>
+                <li class="item-collapse"><a href="index.html" >Home</a></li>
+                <li class="item-collapse"><a href="addProject.html">My Project</a></li>
+                <li class="item-collapse"><a href="testimoni.html" class="active">Testimonial</a></li>
             </ul>
         </div>
-        
-        <div class="right-nav">
+    
+        <div class="right-nav item-collapse" >
             <a href="contact-me.html">Contact Me</a>
         </div>
-
-        <button onclick="showHamburger()" id="open">
-            <i class="fa fa-bars"></i>
-        </button>
+        <div class="nav-right" id="barsmenu">
+            <button onclick="openHamburger()"> <i class="fa-2x fa-solid fa-bars"></i></button>
+        </div>
     </nav>
-    <!-- end navbar -->
 
-    <div class="container-hamburger" id="container-hamburger">
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
         <a href="index.html">Home</a>
         <a href="addProject.html">My Project</a>
-        <a href="testi.html">Testimonial</a>
+        <a href="testimoni.html" class="hamburger-active">Testimonial</a>
         <a href="contact-me.html">Contact</a>
-    </div>
+      </div>
+    <!-- end navbar -->
 
-    <div class="container-card" id="conten">
-        <header><h1>My Testimonial</h1>
-            <h3>Rating By Star</h3>
-            <div class="rating">
-                <ul>
-                    <li><button onclick="showAll()">ALL</button></li>
-                    <li>
-                        <button onclick="dataFiltered(1)">
-                        1<i class="fa fa-star"></i>
-                        </button>
-                    </li>
-                    <li>
-                        <button onclick="dataFiltered(2)">
-                        2<i class="fa fa-star"></i>
-                        </button></li>
-                    <li>
-                        <button onclick="dataFiltered(3)">
-                        3<i class="fa fa-star"></i>
-                        </button></li>
-                    <li>
-                        <button onclick="dataFiltered(4)">
-                        4<i class="fa fa-star"></i>
-                        </button></li>
-                    <li>
-                        <button onclick="dataFiltered(5)"> 
-                        5<i class="fa fa-star"></i>
-                        </button></li>
-                </ul>
+    <div class="container-card">
+        <h1>My Testimonial</h1>
+        <div class="rating">
+            <h2>Rating By Star</h2>
+            <div class="btn-rating">
+                <button class="rating" onclick="allTestimoni()">all <i class="fa-solid fa-star"></i></button>
+                <button class="rating" onclick="filterTestimoni(1)">1 <i class="fa-solid fa-star"></i></button>
+                <button class="rating" onclick="filterTestimoni(2)">2 <i class="fa-solid fa-star"></i></button>
+                <button class="rating" onclick="filterTestimoni(3)">3 <i class="fa-solid fa-star"></i></button>
+                <button class="rating" onclick="filterTestimoni(4)">4 <i class="fa-solid fa-star"></i></button>
+                <button class="rating" onclick="filterTestimoni(5)">5 <i class="fa-solid fa-star"></i></button>
             </div>
-        </header>
-        <main id="testi">
-      
-        </main>
+        </div>
+        <div class="testimoni" id="testimoni">
+            <!-- <div class="testimonial">
+                <img src="assets/images/adipati-dolken-2_43.jpeg" alt="" class="profil-testimonial"/>
+                <p class="coment">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iure fugit eveniet corrupti accusantium. Dolor laboriosam libero quasi ea
+                    qui minima molestias sequi fuga beatae nam. Enim doloribus quasi id beatae?</p>
+                <p class="author">- DOLKEN</p>
+            </div>
+            <div class="testimonial">
+                <img src="assets/images/Snapinsta.app_75379849_3196502527029922_8386803849720375232_n_1080.jpg" alt="" class="profil-testimonial"/>
+                <p class="coment">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iure fugit eveniet corrupti accusantium. Dolor laboriosam libero quasi ea
+                    qui minima molestias sequi fuga beatae nam. Enim doloribus quasi id beatae?</p>
+                <p class="author">- YAMI</p>
+            </div>
+            <div class="testimonial">
+                <img src="assets/images/HD-wallpaper-black-clover-anime-manga-nacht-thumbnail.jpg" alt="" class="profil-testimonial"/>
+                <p class="coment">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iure fugit eveniet corrupti accusantium. Dolor laboriosam libero quasi ea
+                    qui minima molestias sequi fuga beatae nam. Enim doloribus quasi id beatae?</p>
+                <p class="author">- NACHT4D</p>
+            </div> -->
+        </div>
     </div>
 
     <script src="./assets/js/navbar.js"></script>
-    <script src="./assets/js/testimoni.js"></script>
+    <script src="./assets/js/testimoni-HOF.js"></script>
 </body>
 </html>
